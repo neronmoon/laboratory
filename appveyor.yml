@@ -1,0 +1,17 @@
+image: Visual Studio 2015
+platform: Win32
+configuration: Release
+
+
+version: "{build}"
+
+environment:
+  matrix:
+     - VisualStudioVersion: 10.0
+       CMAKE_GENERATOR: "Visual Studio 10 2010"
+
+install:
+  - python --version
+
+build_script:
+  - python build.py
