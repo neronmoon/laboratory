@@ -15,4 +15,4 @@ for name, path in projects.iteritems():
     call('cmake -G "%s" .' % cmake_generator)
     call('msbuild ALL_BUILD.vcxproj /verbosity:minimal /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"')
     for artifact in glob('%s/%s.*' % (path, name)):
-        call('Push-AppveyorArtifact %s' % artifact)
+        call('appveyor PushArtifact %s' % artifact)
