@@ -1,7 +1,7 @@
 from subprocess import check_call
 from os import environ
 from functools import partial
-import glob
+from glob import glob
 
 projects = {
     'lab1': 'OOP/lab1',
