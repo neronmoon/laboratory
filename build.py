@@ -13,6 +13,6 @@ for project in projects:
     call('cmake -G "%s" .' % environ['CMAKE_GENERATOR'])
     call('msbuild ALL_BUILD.vcxproj /verbosity:minimal /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"')
     ar_name = project.replace('/', '_') + '.zip'
-    for ext in ['doc', 'docx', 'h', 'cpp', 'exe']:
-        call('7z a %s *.%s' % (ar_name, ext))
+    for mask in ['*.doc', '*.docx', '*.h', '*.cpp', 'Release/*.exe']:
+        call('7z a %s %s' % (ar_name, mask))
     call('appveyor PushArtifact %s' % ar_name)
