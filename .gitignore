@@ -3,6 +3,12 @@
 .idea
 /**/*/.idea/
 /**/*/CMakeCache*
+/**/*/cmake*
+/**/*/*.cbp
+/**/*/Makefile
 /**/*/cmake-build-debug/
 /Prog/*/*
 !/Prog/*/*.pas
+!/Prog/*/*.doc
+!/Prog/*/*.docx
+!/Prog/*/*.zip
