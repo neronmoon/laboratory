@@ -19,7 +19,6 @@ begin
         read(f, a);
         if a < 0 then write(g, a);
     end;
-    close(f);
 end;
 
 var
@@ -35,7 +34,6 @@ begin
         write(f, input);
     until (input = 0);
 
-
     assign (g, 'g.txt');
     rewrite(g); { перезаписываем файл g }
     p(f, g); { вызов процедуры }
@@ -47,6 +45,6 @@ begin
         writeln(input);
     end;
 
-    close (f);
+    close(f);
     close(g);
 end.

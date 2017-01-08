@@ -10,5 +10,6 @@
 /Prog/*/*
 !/Prog/*/*.pas
 !/Prog/*/*.doc
+!/Prog/*/*.png
 !/Prog/*/*.docx
 !/Prog/*/*.zip
