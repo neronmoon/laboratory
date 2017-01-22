@@ -8,8 +8,10 @@
 /**/*/Makefile
 /**/*/cmake-build-debug/
 /Prog/*/*
-!/Prog/*/*.pas
-!/Prog/*/*.doc
-!/Prog/*/*.png
-!/Prog/*/*.docx
-!/Prog/*/*.zip
+!/Prog/lab*/*.pas
+!/Prog/lab*/*.doc
+!/Prog/lab*/*.png
+!/Prog/lab*/*.docx
+!/Prog/lab*/*.zip
+
+/Prog/env/
