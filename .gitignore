@@ -8,6 +8,7 @@
 /**/*/*.out
 /**/*/Makefile
 /**/*/cmake-build-debug/
+!/**/*/CMakeLists.txt
 /Prog/*/*
 !/Prog/lab*/*.pas
 !/Prog/lab*/*.doc
