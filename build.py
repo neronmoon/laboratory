@@ -11,8 +11,6 @@ for pf in project_folders:
         filter(lambda d: d.startswith('lab'), listdir(pf))
     )
     for project in projects:
-        project = pf + '_' + project
-
         print "############# Building %s #############" % project
         call = partial(check_call, shell=True, cwd=project)
         call('cmake -G "%s" .' % environ['CMAKE_GENERATOR'])
