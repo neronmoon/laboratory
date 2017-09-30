@@ -3,9 +3,11 @@
 // последовательности узнать, входит ли оно в дерево. После выполнения
 // программы очистить память, занятую древовидной структурой.
 
-#include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
+#include <string.h>
+#include <iostream>
+
+using namespace std;
 
 typedef struct bTree {
     int data; //поле данных

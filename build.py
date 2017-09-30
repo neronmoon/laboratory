@@ -2,7 +2,7 @@ from subprocess import check_call
 from os import environ, listdir
 from functools import partial
 
-project_folders = ['OOP', 'Algorithms']
+project_folders = ['Algorithms', 'OOP', ]
 
 
 for pf in project_folders:
