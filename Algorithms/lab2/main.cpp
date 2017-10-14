@@ -1,9 +1,16 @@
 #include <stdlib.h>
 #include <string>
 #include <fstream>
+#include <sstream>
 #include <iostream>
 
 using namespace std;
+
+string my_to_string (int number) {
+    std::stringstream ss;
+    ss << number;
+    return ss.str();
+}
 
 string find_path(int size, bool* visited, int** graph, int node1, int node2, string current_path = "") {
     visited[node1] = true;
@@ -14,7 +21,7 @@ string find_path(int size, bool* visited, int** graph, int node1, int node2, str
     {
         int next = graph[node1][i];
         if (next != 0) {
-            current_path += " > " + to_string(i + 1);
+            current_path += " > " + my_to_string(i + 1);
             string path = find_path(size, visited, graph, i, node2, current_path);
             if (path != "") {
                 return path;
