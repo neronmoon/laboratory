@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include <string.h>
+#include <string>
 #include <fstream>
 #include <iostream>
 
@@ -14,7 +14,8 @@ string find_path(int size, bool* visited, int** graph, int node1, int node2, str
     {
         int next = graph[node1][i];
         if (next != 0) {
-            string path = find_path(size, visited, graph, i, node2, current_path + " > " + to_string(i + 1));
+            current_path += " > " + to_string(i + 1);
+            string path = find_path(size, visited, graph, i, node2, current_path);
             if (path != "") {
                 return path;
             }
