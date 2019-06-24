@@ -3,5 +3,5 @@ project(lab2)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp country.cpp country.h group.cpp group.h)
+set(SOURCE_FILES main.cpp contract.cpp contract.h group.cpp group.h)
 add_executable(lab2 ${SOURCE_FILES})
