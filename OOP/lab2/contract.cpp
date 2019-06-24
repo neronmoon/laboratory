@@ -37,19 +37,14 @@ void Contract::Input()
     cin >> number >> director >> summ;
 }
 
-int main()
+// реализация оператора приведения типа
+Contract::operator double()
 {
-    Contract c1(200, "Vasiliy", 99999.f); // Создаем "статический" объект с1
-    c1.Print();
+    return this->summ;
+}
 
-    Contract *c2 = new Contract; // создаем динамический объект с2
-    c2->Print();                 // -> Contract <Contract name> has <Contract director> director and summ 0
-    delete (c2);                 // удаляем объект
-
-    Contract c3;                          // создаем статический объект с3
-    cout << "Enter new Contract" << endl; // Пишем в консоль чего ожидаем от пользователя
-    c3.Input();                           // Вводим данные
-    c3.Print();                           // выводим данные
-
-    return 0; // мы завершились успешно!
+// реализация оператора сложения
+double operator+(Contract &c1, Contract &c2)
+{
+    return c1.summ + c2.summ;
 }

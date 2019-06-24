@@ -1,6 +1,7 @@
-#include "country.h"
+#include "contract.h"
 
-class Group {
+class Group
+{
 public:
     Group(int length);
 
@@ -10,17 +11,17 @@ public:
 
     int Size();
 
-    void PutCountry(int i, Country &country);
+    void PutContract(int i, Contract &Contract);
 
-    Country &GetCountry(int i);
+    Contract &GetContract(int i);
 
-    double Area();
+    double Average();
 
-    double Area(int limit);
+    double Average(int limit);
 
-    Country &operator[](int i);
+    Contract &operator[](int i);
 
 private:
     int length;
-    Country *countries;
+    Contract *contracts;
 };
