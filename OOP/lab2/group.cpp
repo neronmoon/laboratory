@@ -37,7 +37,7 @@ Contract &Group::GetContract(int i)
     return this->contracts[i];
 }
 
-// Вычисление среднего-арифметического площадей стран в группе
+// Вычисление среднего-арифметического сумм договоров в группе
 double Group::Average()
 {
     double sum = 0;
@@ -48,7 +48,7 @@ double Group::Average()
     return sum / this->length;
 }
 
-// Вычисление среднего-арифметического площадей, не превышающих limit
+// Вычисление среднего-арифметического сумм договоров, не превышающих limit
 double Group::Average(int limit)
 {
     double sum = 0;
