@@ -2,8 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 #include <iostream>
+
 // подключаем заголовок нашего класса
-#include "main.h"
+#include "contract.h"
 
 // мне не хочется писать std::<<cout так что пусть я сразу буду находится в std окружении
 using namespace std;
@@ -12,16 +13,17 @@ using namespace std;
 Contract::Contract()
 {
     // Присваиваем значение this->number = <Contract_number>
-    this->number = 123;
-    this->director = "<Unknown director>";
-    this->summ = 100500.10;
+    number = 123123;
+    strcpy(director, "<Contract director>");
+    // по умолчанию у несуществующей страны нет площади
+    summ = 0.f;
 }
 
 // Реализация конструктора с аргументами
 Contract::Contract(int number, char *director, float summ)
 {
     this->number = number;
-    this->director = director;
+    strcpy(this->director, director);
     this->summ = summ;
 }
 

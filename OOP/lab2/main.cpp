@@ -12,7 +12,7 @@ int main()
     Group group(5);
     for (int i = 0; i < 5; ++i)
     {
-        Contract c(directors[i], numbers[i], summs[i]); // создаем объект
+        Contract c(numbers[i], directors[i], summs[i]); // создаем объект
         group.PutContract(i, c);                        // заносим его в группу
     }
 
